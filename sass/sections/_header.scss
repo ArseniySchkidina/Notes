@@ -4,6 +4,9 @@
     padding-top: 30px;
 }
 .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .input {
     background-color: #61C9A8;
@@ -17,14 +20,32 @@
     font-weight: 500;
 }
 .modes-list {
+    display: flex;
+    justify-content: end;
+    column-gap: 30px;
 }
 .modes-list__item {
 }
 .btn-mode {
+    background-color: #000022;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active{
+        transform: scale(1.5);
+    }
 }
 .btn-mode--night {
+    
 }
 .btn-mode__icon {
+    fill: #FFFFFF;
 }
 .btn-mode--light {
+
 }

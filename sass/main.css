@@ -43,8 +43,10 @@ ul {
 }
 
 img, svg {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Form */
@@ -175,6 +177,12 @@ select:-webkit-autofill:focus {
   padding-top: 30px;
 }
 
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .input {
   background-color: #61C9A8;
   border-radius: 50px;
@@ -186,4 +194,29 @@ select:-webkit-autofill:focus {
   padding: 15px 5px;
   font-size: 30px;
   font-weight: 500;
+}
+
+.modes-list {
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.btn-mode {
+  background-color: #000022;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-mode.active {
+  transform: scale(1.5);
+}
+
+.btn-mode__icon {
+  fill: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
