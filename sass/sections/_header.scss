@@ -35,13 +35,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
 
     &.active{
         transform: scale(1.5);
+        
+    }
+    &:hover{
+        background-color: #FFFFFF;
+        transform: scale(1.5) rotate(360deg);
+        .btn-mode__icon{
+            fill: black;
+        }
     }
 }
 .btn-mode--night {
-    
 }
 .btn-mode__icon {
     fill: #FFFFFF;

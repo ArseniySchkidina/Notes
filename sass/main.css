@@ -212,9 +212,17 @@ select:-webkit-autofill:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 }
 .btn-mode.active {
   transform: scale(1.5);
+}
+.btn-mode:hover {
+  background-color: #FFFFFF;
+  transform: scale(1.5) rotate(360deg);
+}
+.btn-mode:hover .btn-mode__icon {
+  fill: black;
 }
 
 .btn-mode__icon {
