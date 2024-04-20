@@ -1,0 +1,32 @@
+
+.tablet-notes {
+    
+}
+.tablet-notes__content {
+    background-color: #37570D;
+    padding: 35px 60px;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.add-tools {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+
+}
+.add-tools__new-note {
+    padding: 20px 60px;
+    border-radius: 50px;
+    width: 80%;
+    color: #4C3B4D;
+    font-size: 30px;
+    font-weight: 500;
+}
+.add-tools__button-add {
+    background-color: #FFFFFF;
+    padding: 20px 70px;
+    border-radius: 50px;
+    color: #4C3B4D;
+    font-size: 30px;
+    font-weight: 500;
+}
