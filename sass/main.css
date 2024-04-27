@@ -285,7 +285,7 @@ select:-webkit-autofill:focus {
 }
 
 .button-control {
-  background-color: red;
+  background: transparent;
   width: 30px;
   height: 30px;
 }/*# sourceMappingURL=main.css.map */
