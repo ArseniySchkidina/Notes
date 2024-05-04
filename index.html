@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./sass/main.css">
+    <script src="./js/night-mode.js" defer="defer"></script>
 </head>
-<body>
+<body class="night">
     <svg display="none">
         <symbol id="night" viewBox="0 0 30 30">
             <g>
@@ -49,16 +50,16 @@
                 <input class="input input--search" placeholder="Search" type="search">
                 <ul class="modes-list">
                     <li class="modes-list__item">
-                        <button class="btn-mode btn-mode--night active">
+                        <button id="sun" class="btn-mode btn-mode--light">
                             <svg class="btn-mode__icon">
-                                <use xlink:href="#night"></use>
+                                <use xlink:href="#day"></use>
                             </svg>
                         </button>
                     </li>
                     <li class="modes-list__item">
-                        <button class="btn-mode btn-mode--light">
+                        <button class="btn-mode btn-mode--night active" id="nightBtn">
                             <svg class="btn-mode__icon">
-                                <use xlink:href="#day">
+                                <use xlink:href="#night">
                                 </use>
                             </svg>
                         </button>

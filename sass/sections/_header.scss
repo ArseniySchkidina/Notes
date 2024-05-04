@@ -1,5 +1,16 @@
+body.night{
+    .header {
+        background-color: #272779;
+    }
+    .tablet-notes__content{
+        background-color: #37570D;
+    }
+    .body{
+        background-color: rgb(22, 28, 54);
+    }
+}
 .header {
-    background-color: #272779;
+    background-color: #B79CED;
     padding-bottom: 30px;
     padding-top: 30px;
 }
@@ -9,7 +20,7 @@
     align-items: center;
 }
 .input {
-    background-color: #61C9A8;
+    background-color: #FFFFFF;
     border-radius: 50px;
     color: #4C3B4D;
 }
@@ -55,5 +66,9 @@
     fill: #FFFFFF;
 }
 .btn-mode--light {
+    background-color: #F5E960;
 
+    .btn-mode__icon{
+        fill: black;
+    }
 }
