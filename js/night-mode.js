@@ -1,6 +1,3 @@
-// 1.Найти кнопку в const.
-// 2.Произвести прослушку клика.
-// 3.Обратиться к body и удалить ему класс "night"!
 const dayBtn = document.querySelector("#sun");
 const nightBtn = document.querySelector("#nightBtn");
 const body = document.querySelector("body")
@@ -14,6 +11,19 @@ nightBtn.addEventListener("click", function () {
     nightBtn.classList.add("active");
     dayBtn.classList.remove("active");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

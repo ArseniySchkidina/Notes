@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./sass/main.css">
     <script src="./js/night-mode.js" defer="defer"></script>
+    <script src="./js/notes.js" defer="defer"></script>
 </head>
 <body class="night">
     <svg display="none">
@@ -72,11 +73,11 @@
         <section class="tablet-notes">
             <div class="container">
                 <div class="tablet-notes__content">
-                    <form class="add-tools" action="">
-                        <input class="add-tools__new-note" type="text" placeholder="Add note">
+                    <form class="add-tools" id="form" action="">
+                        <input class="add-tools__new-note" type="text" placeholder="Add note" id="add-note">
                         <input class="add-tools__button-add" type="submit" value="Add" placeholder="Add" >
                     </form>
-                    <ul class="notes-list">
+                    <!-- <ul class="notes-list">
                         <li class="notes-list__item">
                             <textarea class="note" name="" id="" cols="30" rows="10">
                             </textarea>
@@ -112,7 +113,7 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </section>
