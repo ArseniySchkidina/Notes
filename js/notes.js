@@ -1,12 +1,8 @@
-// 1. Создать массив, где будут хранится все заметки!
-// 2. Обьект в новой заметке сохранять в массив всех заметок.
-// 2.1. Обьект заметки превратить в JSON-строку.
-// 2.2. Сохранить заметку в локальное хранилище (localStorage);
-
+// 1. Сохранять в LocalStorage.
 // переменные 
 const form = document.querySelector("#form");
 const addNote = document.querySelector("#add-note");
-
+const allNotes = [];
 
 // функции
 function preparationMeaning(inputElement) {
@@ -19,15 +15,24 @@ function preparationMeaning(inputElement) {
 
 function newNoteObject(text) {
     const newNote = {
-            text: text,
-            favourite: false, 
-            id: null,
-        }
+        text: text,
+        favourite: false, 
+        id: null,
+    };
+    return newNote;
 }
+
+function pushNewNote(noteObj) {
+    allNotes.push(noteObj);
+}
+
 // события 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const processedText = preparationMeaning(addNote);
+    const note = newNoteObject(processedText);
+    pushNewNote(note);
+    console.log(allNotes);
 })
 
 
