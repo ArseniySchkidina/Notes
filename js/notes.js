@@ -1,10 +1,12 @@
-// 1. Сохранять в LocalStorage.
 // переменные 
 const form = document.querySelector("#form");
 const addNote = document.querySelector("#add-note");
-const allNotes = dataFromLocalStorage() || [];
 const keyFromLocalStorage = "notes";
-console.log(allNotes);
+const allNotes = dataFromLocalStorage(keyFromLocalStorage) || [];
+
+if(allNotes.length > 0){
+    renderNotes(allNotes);
+}
 
 // функции
 function preparationMeaning(inputElement) {
@@ -41,6 +43,9 @@ function dataFromLocalStorage(key) {
     return data;
 }
 
+function renderNotes(listNotes) {
+    console.log(listNotes);
+}
 
 // события 
 form.addEventListener("submit", (event) => {
@@ -50,16 +55,11 @@ form.addEventListener("submit", (event) => {
     pushNewNote(note);
     const dataNotes = toJSONFormat(allNotes); 
     saveToLocalStorage(keyFromLocalStorage, dataNotes);
-
+    renderNotes(allNotes);
 })
 
-// 1. Получить данные из local storage.
-// 2. Переформатировать в JSON.
-// 3. Рендерить заметки на странице.
-// 4. 
-
-
-
+// 1. Проверить массив на пустоту.
+// 2. If  массив !== пустой, запустить рендер заметок.
 
 
 
