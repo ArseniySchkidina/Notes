@@ -44,8 +44,52 @@ function dataFromLocalStorage(key) {
 }
 
 function renderNotes(listNotes) {
-    console.log(listNotes);
+    const notesList = document.querySelector("#notesList");
+    listNotes.forEach(note => {
+        const newNote = 
+        `
+                                <li class="notes-list__item">
+                            <textarea class="note" name="" id="" cols="30" rows="10">
+                            ${note.text}
+                            </textarea>
+                            <ul class="list-controls-button">
+                                <li class="list-controls-button__item">
+                                    <button class="button-control">
+                                        <svg>
+                                            <use xlink:href="#redactive">
+                                            </use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="list-controls-button__item">
+                                    <button class="button-control">
+                                        <svg>
+                                            <use xlink:href="#favourites"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="list-controls-button__item">
+                                    <button class="button-control">
+                                        <svg>
+                                            <use xlink:href="#trash"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="list-controls-button__item">
+                                    <button class="button-control">
+                                        <svg>
+                                            <use xlink:href="#arrow"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+        `;
+        notesList.insertAdjacentHTML('afterbegin', newNote);
+    });
 }
+
+
 
 // события 
 form.addEventListener("submit", (event) => {
@@ -58,10 +102,5 @@ form.addEventListener("submit", (event) => {
     renderNotes(allNotes);
 })
 
-// 1. Проверить массив на пустоту.
-// 2. If  массив !== пустой, запустить рендер заметок.
-
-
-
-
-
+// 1. Create отступ между notes.
+// 2. Очищать инпут от текста.

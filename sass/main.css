@@ -284,6 +284,12 @@ body.night .body {
   font-weight: 500;
 }
 
+.notes-list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
 .notes-list__item {
   background-color: white;
   border-radius: 34px;
