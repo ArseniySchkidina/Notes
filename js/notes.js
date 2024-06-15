@@ -89,12 +89,17 @@ function renderNotes(listNotes) {
     });
 }
 
+function cleanInput() {
+    addNote.value = "";
+}
+
 
 
 // события 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const processedText = preparationMeaning(addNote);
+    cleanInput();
     const note = newNoteObject(processedText);
     pushNewNote(note);
     const dataNotes = toJSONFormat(allNotes); 
